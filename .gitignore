@@ -4,6 +4,5 @@ data
 models
 *.swp
 *.p
-new_images/*.jpg
 lenet.*
 checkpoint

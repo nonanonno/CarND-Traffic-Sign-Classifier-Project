@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 ---
 ### Project code
 
-Here is a link to my [project code](https://github.com/nonanonno/CarND-Traffic-Sign-Classifier-Project)
+Here is a link to my [project code](https://github.com/nonanonno/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
