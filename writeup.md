@@ -96,6 +96,7 @@ These are computed in 12th cell, 13th cell, 14th cell.
 I chesed the LeNet architecture that has two convolution layers, three fully connected layers. Because the LeNet is nice for mnist dataset (I learned that in lesson 12) and the size of the traffic sign image is similar to size of mnist image, I use it. I tried the batch size as 32, 64, 128 and 256. The validation set accuracy with the batch size as 32 is 0.959, but the accuracy is unstable as shown in the below figure. The validation accuracy with the batch size as 64 is also unstable. The validation accuracy with the batch size as 256 is lower. Therefore I chose the batch size as 128.
 
 ![alt text][learn32]
+
 ![alt text][learn128]
 
 The accuracy for training set is 1.000, so the model can classify the training data perfectly. However, the accuracy for validation set is 6 points lower than for training set because the model has been fitted to the training data strongly. To solve this problem, there is an idea that I augment training data with mirrored images, scaled images, and so on. This makes training data more variously.
