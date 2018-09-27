@@ -22,6 +22,8 @@ The goals / steps of this project are the following:
 [convert]: ./imgs/convert.png
 [news]: ./imgs/news.png
 [fm]: ./imgs/fm.png
+[learn32]: ./imgs/learn32.png
+[learn128]: ./imgs/learn128.png
 
 ---
 ### Project code
@@ -91,9 +93,12 @@ My final model results were:
 These are computed in 12th cell, 13th cell, 14th cell.
 
 
-I chesed LeNet archhitecture because I know that LeNet is nice to mnist. The image size of traffic signs is similar to mnist.
+I chesed the LeNet architecture that has two convolution layers, three fully connected layers. Because the LeNet is nice for mnist dataset (I learned that in lesson 12) and the size of the traffic sign image is similar to size of mnist image, I use it. I tried the batch size as 32, 64, 128 and 256. The validation set accuracy with the batch size as 32 is 0.959, but the accuracy is unstable as shown in the below figure. The validation accuracy with the batch size as 64 is also unstable. The validation accuracy with the batch size as 256 is lower. Therefore I chose the batch size as 128.
 
-The accuracy for training set is 1.000, so the model can classify the training data perfectly. However, the accuracy for validation set is 6 points lower than for training set because the model has been fitted to the training data strongly.
+![alt text][learn32]
+![alt text][learn128]
+
+The accuracy for training set is 1.000, so the model can classify the training data perfectly. However, the accuracy for validation set is 6 points lower than for training set because the model has been fitted to the training data strongly. To solve this problem, there is an idea that I augment training data with mirrored images, scaled images, and so on. This makes training data more variously.
 
 
 ### Test a Model on New Images
@@ -112,8 +117,7 @@ The urls of original images are listed here.
 * https://www.thetalkingsuitcase.com/wp-content/uploads/2017/05/wsi-imageoptim-French-Road-Signs-No-Entry.jpg
 * https://cdn-images-1.medium.com/max/1200/1*PoVAzAk7lTiWXHIgm2dLeQ.jpeg
 
-
-The 4th image might be difficult to classify a little because bottom of the sign is dirty. However, all of these images are easy to recognize for human.
+The first image is little tilted, and the background is sky. The second image and the third image, the 4th image has texture in the background, but the sign in the 4th image is dirty , so the 4th image might be difficult to classify. the background of the 5th image is sky. The brightness or the constrast of all images is not specially, thus it is easy for human to recognize the signs of the images.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
